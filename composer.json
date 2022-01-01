@@ -19,8 +19,7 @@
         "php": "^8.0",
         "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^8.73",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "ext-http": "*"
+        "guzzlehttp/guzzle": "^7.0.1"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
