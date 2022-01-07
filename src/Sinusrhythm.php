@@ -2,24 +2,22 @@
 
 namespace Schruptor\Sinusrhythm;
 
-use Exception;
-use GuzzleHttp\Client;
-use Psr\Http\Message\ResponseInterface;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Client\Response;
 use Ramsey\Uuid\Lazy\LazyUuidFromString;
+use Schruptor\Sinusrhythm\Exceptions\EmptyStringGiven;
 
 class Sinusrhythm
 {
     /**
-     * @throws Exception
+     * @throws EmptyStringGiven
      */
-    public static function ping(string $uuid): ResponseInterface
+    public static function ping(string $uuid): Response
     {
+        throw_if($uuid === '', new EmptyStringGiven());
+
         $uuid = new LazyUuidFromString($uuid);
 
-        $client = new Client([
-            'base_uri' => 'https://sinusrhythm.de/ping/',
-        ]);
-
-        return $client->request('GET', (string) $uuid);
+        return Http::send('GET', "https://sinusrhythm.de/ping/$uuid");
     }
 }

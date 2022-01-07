@@ -35,8 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Schruptor\\Sinusrhythm\\": "src",
-            "Schruptor\\Sinusrhythm\\Database\\Factories\\": "database/factories"
+            "Schruptor\\Sinusrhythm\\": "src"
         }
     },
     "autoload-dev": {
@@ -59,10 +58,7 @@
         "laravel": {
             "providers": [
                 "Schruptor\\Sinusrhythm\\SinusrhythmServiceProvider"
-            ],
-            "aliases": {
-                "Sinusrhythm": "Schruptor\\Sinusrhythm\\Facades\\Sinusrhythm"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
