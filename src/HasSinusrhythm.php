@@ -2,8 +2,6 @@
 
 namespace Schruptor\Sinusrhythm;
 
-use Schruptor\Sinusrhythm\Sinusrhythm;
-
 trait HasSinusrhythm
 {
     public function __destruct()
