@@ -17,9 +17,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.73",
-        "guzzlehttp/guzzle": "^7.0.1"
+        "illuminate/contracts": "^8.73"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
@@ -52,13 +50,6 @@
         "allow-plugins": {
             "pestphp/pest-plugin": false,
             "phpstan/extension-installer": false
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Schruptor\\Sinusrhythm\\SinusrhythmServiceProvider"
-            ]
         }
     },
     "minimum-stability": "dev",
