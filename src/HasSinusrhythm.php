@@ -2,7 +2,7 @@
 
 namespace Schruptor\Sinusrhythm;
 
-trait HasSinusrhythm
+trait HasDefaultSinusrhythm
 {
     public function __destruct()
     {

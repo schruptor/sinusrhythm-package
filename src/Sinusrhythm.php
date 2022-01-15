@@ -12,12 +12,12 @@ class Sinusrhythm
     /**
      * @throws EmptyStringGiven
      */
-    public static function ping(string $uuid): Response
+    public static function ping(string $uuid, ?int $count = null): Response
     {
         throw_if($uuid === '', new EmptyStringGiven());
 
         $uuid = new LazyUuidFromString($uuid);
 
-        return Http::send('GET', "https://sinusrhythm.de/ping/$uuid");
+        return Http::send('GET', "https://sinusrhythm.dev/ping/$uuid" . ($count !== null ? "?count=$count" : ''));
     }
 }
